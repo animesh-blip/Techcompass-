@@ -14,12 +14,17 @@ const variants = {
   icon: { src: "/images/logo-icon.svg", width: 200, height: 200 },
 };
 
+const lightVariants: Partial<Record<string, string>> = {
+  stacked: "/images/logo-stacked-light.svg",
+};
+
 export default function Logo({
   className,
   light = false,
   variant = "horizontal",
 }: LogoProps) {
-  const { src, width, height } = variants[variant];
+  const { width, height } = variants[variant];
+  const src = (light && lightVariants[variant]) || variants[variant].src;
 
   return (
     <Link href="/" className={clsx("flex items-center", className)}>
@@ -32,8 +37,7 @@ export default function Logo({
           "h-auto w-auto",
           variant === "horizontal" && "max-h-10 md:max-h-12",
           variant === "stacked" && "max-h-24",
-          variant === "icon" && "max-h-10",
-          light && "brightness-[2] contrast-125"
+          variant === "icon" && "max-h-10"
         )}
         priority={variant === "horizontal"}
       />
