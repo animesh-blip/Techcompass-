@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: #1a1a2e;
+  background: #ffffff;
+}
+
+@layer components {
+  .gradient-navy {
+    @apply bg-gradient-to-br from-navy-500 to-navy-700;
+  }
+  .gradient-green {
+    @apply bg-gradient-to-r from-brand-green to-brand-green-light;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
