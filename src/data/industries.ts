@@ -36,20 +36,6 @@ export const industries: Industry[] = [
     icon: "HiCog6Tooth",
   },
   {
-    id: "healthcare-it",
-    title: "Healthcare IT",
-    description:
-      "Supporting digital health transformation with EHR specialists, health informatics professionals, and compliance-focused IT talent who understand HIPAA and healthcare workflows.",
-    roles: [
-      "EHR Implementation",
-      "Health Informatics",
-      "Clinical Systems",
-      "HIPAA Compliance",
-      "Telehealth Solutions",
-    ],
-    icon: "HiHeart",
-  },
-  {
     id: "finance-accounting",
     title: "Finance & Accounting",
     description:

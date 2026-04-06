@@ -27,15 +27,15 @@ export default function Header() {
   return (
     <header
       className={clsx(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-500",
         isScrolled
-          ? "bg-white shadow-lg py-2"
-          : "bg-white/95 backdrop-blur-sm py-4"
+          ? "bg-white/95 backdrop-blur-md shadow-lg py-2 border-b border-brand-green/10"
+          : "bg-white/90 backdrop-blur-sm py-4"
       )}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
-          <Logo />
+          <Logo variant="horizontal" />
 
           <nav className="hidden lg:flex items-center space-x-1">
             {NAV_LINKS.map((link) => (
@@ -43,22 +43,27 @@ export default function Header() {
                 key={link.href}
                 href={link.href}
                 className={clsx(
-                  "px-3 py-2 text-sm font-medium rounded-md transition-colors",
+                  "px-3 py-2 text-sm font-medium rounded-md transition-all duration-300 animated-underline",
                   pathname === link.href
                     ? "text-brand-green font-semibold"
-                    : "text-navy-500 hover:text-brand-green hover:bg-gray-50"
+                    : "text-navy-500 hover:text-brand-green"
                 )}
               >
                 {link.label}
               </Link>
             ))}
-            <Button href="/contact" variant="secondary" size="sm" className="ml-4">
+            <Button
+              href="/contact"
+              variant="secondary"
+              size="sm"
+              className="ml-4 animate-pulse-glow"
+            >
               Get Started
             </Button>
           </nav>
 
           <button
-            className="lg:hidden p-2 text-navy-500"
+            className="lg:hidden p-2 text-navy-500 hover:text-brand-green transition-colors"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -71,31 +76,36 @@ export default function Header() {
         </div>
       </div>
 
-      {isMenuOpen && (
-        <div className="lg:hidden bg-white border-t shadow-lg">
-          <nav className="max-w-7xl mx-auto px-4 py-4 space-y-1">
-            {NAV_LINKS.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className={clsx(
-                  "block px-4 py-3 rounded-md text-base font-medium transition-colors",
-                  pathname === link.href
-                    ? "text-brand-green bg-green-50"
-                    : "text-navy-500 hover:bg-gray-50"
-                )}
-              >
-                {link.label}
-              </Link>
-            ))}
-            <div className="pt-4">
-              <Button href="/contact" variant="secondary" className="w-full">
-                Get Started
-              </Button>
-            </div>
-          </nav>
-        </div>
-      )}
+      {/* Mobile Menu */}
+      <div
+        className={clsx(
+          "lg:hidden overflow-hidden transition-all duration-300",
+          isMenuOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
+        )}
+      >
+        <nav className="max-w-7xl mx-auto px-4 py-4 space-y-1 bg-white/95 backdrop-blur-md border-t">
+          {NAV_LINKS.map((link, index) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className={clsx(
+                "block px-4 py-3 rounded-lg text-base font-medium transition-all duration-300",
+                pathname === link.href
+                  ? "text-brand-green bg-green-50"
+                  : "text-navy-500 hover:bg-gray-50 hover:text-brand-green"
+              )}
+              style={{ animationDelay: `${index * 50}ms` }}
+            >
+              {link.label}
+            </Link>
+          ))}
+          <div className="pt-4">
+            <Button href="/contact" variant="secondary" className="w-full">
+              Get Started
+            </Button>
+          </div>
+        </nav>
+      </div>
     </header>
   );
 }

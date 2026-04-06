@@ -27,7 +27,7 @@ export const faqs: FAQ[] = [
   {
     question: "What industries do you serve?",
     answer:
-      "We serve a wide range of industries including IT & Technology, Engineering, Healthcare IT, Finance & Accounting, and Administrative & Professional sectors. Our recruiters have domain expertise in each industry vertical.",
+      "We serve a wide range of industries including IT & Technology, Engineering, Finance & Accounting, and Administrative & Professional sectors. Our recruiters have domain expertise in each industry vertical.",
   },
   {
     question: "How do you ensure candidate quality?",

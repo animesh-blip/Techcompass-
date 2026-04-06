@@ -1,8 +1,12 @@
-import type { Metadata } from "next";
+"use client";
+
 import PageHero from "@/components/ui/PageHero";
 import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Button from "@/components/ui/Button";
+import ScrollReveal from "@/components/ui/ScrollReveal";
+import AnimatedCounter from "@/components/ui/AnimatedCounter";
+import FloatingShapes from "@/components/ui/FloatingShapes";
 import {
   HiClipboardDocumentList,
   HiMagnifyingGlass,
@@ -12,25 +16,20 @@ import {
   HiRocketLaunch,
 } from "react-icons/hi2";
 
-export const metadata: Metadata = {
-  title: "How We Work",
-  description:
-    "Discover TechCompass's proven 6-step hiring process — from requirement understanding to onboarding, emphasizing speed, quality, and compliance.",
-};
-
 const steps = [
   {
     number: "01",
     icon: HiClipboardDocumentList,
     title: "Requirement Understanding",
     description:
-      "We start by deeply understanding your hiring needs — the role, technical requirements, team dynamics, company culture, and project timelines. Our dedicated account manager works closely with your hiring team to capture every detail that matters.",
+      "We start by deeply understanding your hiring needs — the role, technical requirements, team dynamics, company culture, and project timelines. Our dedicated account manager works closely with your hiring team to capture every detail.",
     highlights: [
       "Detailed job requirement analysis",
       "Technical skill mapping",
       "Culture fit assessment criteria",
       "Timeline and priority alignment",
     ],
+    gradient: "from-blue-500 to-indigo-500",
   },
   {
     number: "02",
@@ -44,6 +43,7 @@ const steps = [
       "Active and passive candidate outreach",
       "Availability and interest verification",
     ],
+    gradient: "from-cyan-500 to-blue-500",
   },
   {
     number: "03",
@@ -57,19 +57,21 @@ const steps = [
       "Communication and soft skills review",
       "Background and reference pre-checks",
     ],
+    gradient: "from-purple-500 to-violet-500",
   },
   {
     number: "04",
     icon: HiPaperAirplane,
     title: "Client Submission",
     description:
-      "We present a shortlist of 3-5 highly qualified candidates with detailed profiles, assessment summaries, and our recommendations. Each submission includes the candidate's technical strengths, experience highlights, and availability timeline.",
+      "We present a shortlist of 3-5 highly qualified candidates with detailed profiles, assessment summaries, and our recommendations. Each submission includes the candidate's strengths, experience highlights, and availability.",
     highlights: [
       "Curated shortlist of top candidates",
       "Detailed candidate profiles and summaries",
       "Skill-match scoring against requirements",
       "24-48 hour submission turnaround",
     ],
+    gradient: "from-brand-green to-emerald-500",
   },
   {
     number: "05",
@@ -83,6 +85,7 @@ const steps = [
       "Real-time feedback coordination",
       "Offer negotiation support",
     ],
+    gradient: "from-amber-500 to-orange-500",
   },
   {
     number: "06",
@@ -96,6 +99,7 @@ const steps = [
       "Post-placement check-ins",
       "Ongoing performance support",
     ],
+    gradient: "from-rose-500 to-pink-500",
   },
 ];
 
@@ -108,102 +112,117 @@ export default function HowWeWorkPage() {
         breadcrumbs={[{ label: "How We Work", href: "/how-we-work" }]}
       />
 
-      <section className="py-20">
+      <section className="py-24">
         <Container>
-          <SectionHeading
-            title="Our 6-Step Hiring Process"
-            subtitle="From understanding your requirements to onboarding the right talent — every step is optimized for efficiency and quality."
-          />
+          <ScrollReveal>
+            <SectionHeading
+              title="Our 6-Step Hiring Process"
+              subtitle="From understanding your requirements to onboarding the right talent — every step is optimized for efficiency and quality."
+            />
+          </ScrollReveal>
 
-          <div className="space-y-12">
-            {steps.map((step, index) => (
-              <div
-                key={step.number}
-                className={`grid grid-cols-1 lg:grid-cols-12 gap-8 items-start ${
-                  index % 2 === 1 ? "" : ""
-                }`}
-              >
-                <div className="lg:col-span-1 flex lg:justify-center">
-                  <span className="text-5xl font-bold text-brand-green/20 font-heading">
-                    {step.number}
-                  </span>
-                </div>
-                <div className="lg:col-span-6">
-                  <div className="flex items-center gap-3 mb-3">
-                    <div className="w-10 h-10 bg-brand-green rounded-lg flex items-center justify-center">
-                      <step.icon className="w-5 h-5 text-white" />
+          <div className="relative">
+            {/* Vertical connecting line */}
+            <div className="hidden lg:block absolute left-[60px] top-0 bottom-0 w-px bg-gradient-to-b from-brand-green via-navy-300 to-brand-green opacity-20" />
+
+            <div className="space-y-16">
+              {steps.map((step, index) => (
+                <ScrollReveal key={step.number} delay={index * 100}>
+                  <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start relative">
+                    {/* Step number */}
+                    <div className="lg:col-span-1 flex lg:justify-center relative z-10">
+                      <span className="text-6xl font-bold gradient-text font-heading opacity-60">
+                        {step.number}
+                      </span>
                     </div>
-                    <h3 className="text-xl font-bold text-navy-500 font-heading">
-                      {step.title}
-                    </h3>
-                  </div>
-                  <p className="text-gray-600 leading-relaxed">
-                    {step.description}
-                  </p>
-                </div>
-                <div className="lg:col-span-5">
-                  <div className="bg-gray-50 rounded-xl p-6">
-                    <ul className="space-y-3">
-                      {step.highlights.map((highlight) => (
-                        <li
-                          key={highlight}
-                          className="flex items-start gap-2 text-sm text-gray-700"
+
+                    {/* Content */}
+                    <div className="lg:col-span-6">
+                      <div className="flex items-center gap-4 mb-4">
+                        <div
+                          className={`w-12 h-12 bg-gradient-to-br ${step.gradient} rounded-xl flex items-center justify-center shadow-lg`}
                         >
-                          <div className="w-1.5 h-1.5 bg-brand-green rounded-full mt-2 flex-shrink-0" />
-                          {highlight}
-                        </li>
-                      ))}
-                    </ul>
+                          <step.icon className="w-6 h-6 text-white" />
+                        </div>
+                        <h3 className="text-xl font-bold text-navy-500 font-heading">
+                          {step.title}
+                        </h3>
+                      </div>
+                      <p className="text-gray-600 leading-relaxed">
+                        {step.description}
+                      </p>
+                    </div>
+
+                    {/* Highlights */}
+                    <div className="lg:col-span-5">
+                      <div className="bg-gray-50 rounded-2xl p-6">
+                        <ul className="space-y-3">
+                          {step.highlights.map((highlight) => (
+                            <li
+                              key={highlight}
+                              className="flex items-start gap-3 text-sm text-gray-700"
+                            >
+                              <div className="w-2 h-2 bg-brand-green rounded-full mt-2 flex-shrink-0" />
+                              <span>{highlight}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
                   </div>
-                </div>
-                {index < steps.length - 1 && (
-                  <div className="lg:col-span-12">
-                    <div className="border-b border-gray-200" />
-                  </div>
-                )}
-              </div>
-            ))}
+                </ScrollReveal>
+              ))}
+            </div>
           </div>
         </Container>
       </section>
 
-      {/* Turnaround Emphasis */}
-      <section className="py-20 gradient-navy">
-        <Container>
-          <div className="text-center max-w-3xl mx-auto">
-            <h2 className="text-3xl font-bold text-white font-heading mb-6">
-              Speed Without Compromise
-            </h2>
-            <p className="text-gray-300 mb-8 leading-relaxed">
-              Our average time-to-submit is 24-48 hours for qualified candidates.
-              With a dedicated recruiting team and a database of 50,000+
-              pre-screened professionals, we fill positions faster than industry
-              averages — without cutting corners on quality or compliance.
-            </p>
-            <div className="grid grid-cols-3 gap-8 mb-12">
-              <div>
-                <p className="text-4xl font-bold text-brand-green font-heading">
-                  24-48h
-                </p>
-                <p className="text-gray-400 text-sm mt-1">Time to Submit</p>
+      {/* Stats Section */}
+      <section className="py-24 gradient-navy relative overflow-hidden">
+        <FloatingShapes variant="dark" />
+        <div className="absolute inset-0 grid-pattern opacity-10 pointer-events-none" />
+
+        <Container className="relative z-10">
+          <ScrollReveal>
+            <div className="text-center max-w-3xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-bold text-white font-heading mb-6">
+                Speed Without Compromise
+              </h2>
+              <p className="text-gray-300 mb-12 leading-relaxed text-lg">
+                Our average time-to-submit is 24-48 hours for qualified
+                candidates. With a dedicated recruiting team and a database of
+                50,000+ pre-screened professionals, we fill positions faster than
+                industry averages — without cutting corners on quality.
+              </p>
+              <div className="grid grid-cols-3 gap-8 mb-12">
+                <div className="glass-card p-6">
+                  <p className="text-4xl md:text-5xl font-bold gradient-text font-heading">
+                    24-48h
+                  </p>
+                  <p className="text-gray-400 text-sm mt-2">Time to Submit</p>
+                </div>
+                <div className="glass-card p-6">
+                  <p className="text-4xl md:text-5xl font-bold gradient-text font-heading">
+                    3-5
+                  </p>
+                  <p className="text-gray-400 text-sm mt-2">
+                    Candidates per Role
+                  </p>
+                </div>
+                <div className="glass-card p-6">
+                  <p className="text-4xl md:text-5xl font-bold gradient-text font-heading">
+                    <AnimatedCounter target={95} suffix="%" />
+                  </p>
+                  <p className="text-gray-400 text-sm mt-2">
+                    Interview-to-Offer
+                  </p>
+                </div>
               </div>
-              <div>
-                <p className="text-4xl font-bold text-brand-green font-heading">
-                  3-5
-                </p>
-                <p className="text-gray-400 text-sm mt-1">Candidates per Role</p>
-              </div>
-              <div>
-                <p className="text-4xl font-bold text-brand-green font-heading">
-                  95%
-                </p>
-                <p className="text-gray-400 text-sm mt-1">Interview-to-Offer Rate</p>
-              </div>
+              <Button href="/contact" variant="secondary" size="lg" className="hover-glow">
+                Start Hiring Now
+              </Button>
             </div>
-            <Button href="/contact" variant="secondary" size="lg">
-              Start Hiring Now
-            </Button>
-          </div>
+          </ScrollReveal>
         </Container>
       </section>
     </>
