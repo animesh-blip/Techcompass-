@@ -56,7 +56,7 @@ export default function IndustriesPage() {
               const gradient = gradients[index % gradients.length];
               return (
                 <div key={industry.id} id={industry.id}>
-                  <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                  <div className="grid grid-cols-1 md:grid-cols-12 lg:grid-cols-12 gap-10 items-center">
                     <div
                       className={`lg:col-span-7 ${
                         index % 2 === 1 ? "lg:order-2" : ""

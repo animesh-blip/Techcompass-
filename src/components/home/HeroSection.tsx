@@ -8,7 +8,7 @@ import { CompassDecoration, CircuitPattern } from "@/components/ui/TechPattern";
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-gradient-to-br from-navy-600 via-navy-500 to-navy-800 bg-200% animate-gradient-shift">
+    <section className="relative min-h-[85vh] md:min-h-[90vh] flex items-center overflow-hidden bg-gradient-to-br from-navy-600 via-navy-500 to-navy-800 bg-200% animate-gradient-shift">
       {/* Background layers */}
       <FloatingShapes variant="hero" />
       <div className="absolute inset-0 grid-pattern opacity-15 pointer-events-none" />
@@ -69,7 +69,7 @@ export default function HeroSection() {
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 opacity-0 animate-fade-in-up animation-delay-700">
             {[
-              { target: 500, suffix: "+", label: "Placements" },
+              { label: "Placements", custom: "Hundreds" },
               { target: 150, suffix: "+", label: "Active Clients" },
               { label: "Avg. Turnaround", custom: "24-48h" },
               { target: 98, suffix: "%", label: "Client Retention" },

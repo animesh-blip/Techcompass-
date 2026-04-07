@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { promises as fs } from "fs";
 import path from "path";
 import globalTokenStore from "@/lib/token-store";
+import { validateSiteContent } from "@/lib/validate-content";
 
 const CONTENT_FILE = path.join(process.cwd(), "content", "site-content.json");
 
@@ -20,10 +21,19 @@ export async function POST(request: NextRequest) {
     const token = authHeader?.replace("Bearer ", "");
 
     if (!token || !globalTokenStore.has(token)) {
-      return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+      return NextResponse.json({ error: "Session expired. Please log in again." }, { status: 401 });
     }
 
     const body = await request.json();
+
+    // Validate content structure
+    const validation = validateSiteContent(body);
+    if (!validation.valid) {
+      return NextResponse.json(
+        { error: "Validation failed", details: validation.errors },
+        { status: 400 }
+      );
+    }
 
     // Create a backup before saving
     try {
@@ -46,9 +56,14 @@ export async function POST(request: NextRequest) {
       // Backup failure shouldn't block save
     }
 
-    await fs.writeFile(CONTENT_FILE, JSON.stringify(body, null, 2), "utf-8");
+    // Atomic write: write to temp file then rename
+    const tmpFile = CONTENT_FILE + ".tmp";
+    await fs.writeFile(tmpFile, JSON.stringify(body, null, 2), "utf-8");
+    await fs.rename(tmpFile, CONTENT_FILE);
+
     return NextResponse.json({ success: true });
-  } catch {
-    return NextResponse.json({ error: "Failed to save content" }, { status: 500 });
+  } catch (err) {
+    const message = err instanceof Error ? err.message : "Failed to save content";
+    return NextResponse.json({ error: message }, { status: 500 });
   }
 }

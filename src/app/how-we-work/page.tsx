@@ -39,7 +39,7 @@ const steps = [
       "Our recruiters leverage our proprietary database, job boards, professional networks, and referral channels to build a targeted candidate pipeline. Every candidate undergoes initial screening for experience, skills, and availability.",
     highlights: [
       "Multi-channel sourcing strategy",
-      "Database of 50,000+ pre-screened professionals",
+      "Extensive pre-screened professional network",
       "Active and passive candidate outreach",
       "Availability and interest verification",
     ],
@@ -69,7 +69,7 @@ const steps = [
       "Curated shortlist of top candidates",
       "Detailed candidate profiles and summaries",
       "Skill-match scoring against requirements",
-      "24-48 hour submission turnaround",
+      "Rapid submission turnaround",
     ],
     gradient: "from-brand-green to-emerald-500",
   },
@@ -189,10 +189,8 @@ export default function HowWeWorkPage() {
                 Speed Without Compromise
               </h2>
               <p className="text-gray-300 mb-12 leading-relaxed text-lg">
-                Our average time-to-submit is 24-48 hours for qualified
-                candidates. With a dedicated recruiting team and a database of
-                50,000+ pre-screened professionals, we fill positions faster than
-                industry averages — without cutting corners on quality.
+                Our streamlined process delivers qualified candidates faster
+                than industry averages — without cutting corners on quality.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-12">
                 <div className="glass-card p-6">

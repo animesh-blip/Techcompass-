@@ -17,7 +17,7 @@ const reasons = [
     icon: HiClock,
     title: "Rapid Turnaround",
     description:
-      "We submit qualified candidates within 24-48 hours. Our proactive sourcing and ready bench ensure minimal time-to-fill.",
+      "Qualified profiles submitted within hours, not days. Our proactive sourcing and ready bench minimize time-to-fill.",
   },
   {
     icon: HiCheckBadge,
@@ -35,7 +35,7 @@ const reasons = [
     icon: HiUserGroup,
     title: "Dedicated Team",
     description:
-      "Every client gets a dedicated account team — recruiter, account manager, and compliance specialist working in sync.",
+      "Every client gets a dedicated account team working in sync — recruiter, account manager, and compliance specialist.",
   },
   {
     icon: HiChartBar,

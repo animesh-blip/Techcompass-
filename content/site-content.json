@@ -5,7 +5,7 @@
     "titleHighlight": "Leading US Companies",
     "subtitle": "Your trusted staffing partner for IT, Engineering, and Professional talent. Pre-vetted, high-quality candidates delivered with speed and precision across all 50 states.",
     "stats": [
-      { "value": "500+", "label": "Placements" },
+      { "value": "Hundreds", "label": "Placements" },
       { "value": "150+", "label": "Active Clients" },
       { "value": "24-48h", "label": "Avg. Turnaround" },
       { "value": "98%", "label": "Client Retention" }
@@ -75,5 +75,148 @@
     { "question": "What geographic areas do you cover?", "answer": "We provide staffing services across all 50 US states, supporting both on-site and remote positions. Our recruiting operations in India enable us to offer a 24-hour sourcing cycle, giving our clients a significant time-to-fill advantage." },
     { "question": "How does your contract-to-hire model work?", "answer": "In our contract-to-hire model, a consultant works on a contract basis for a defined evaluation period (typically 3-6 months). If the consultant is a good fit, the client can convert them to a full-time employee. This approach minimizes hiring risk and ensures cultural fit." },
     { "question": "What compliance measures do you follow?", "answer": "We maintain strict compliance with all federal and state employment laws, including I-9 verification, E-Verify, workers compensation, and tax regulations. We carry comprehensive insurance coverage and ensure all consultants meet legal work authorization requirements." }
+  ],
+  "whyChooseUs": [
+    {
+      "title": "Rapid Turnaround",
+      "description": "Qualified profiles submitted within 24-48 hours. Our proactive sourcing and ready bench minimize time-to-fill."
+    },
+    {
+      "title": "Quality First",
+      "description": "Multi-layered screening including technical assessments, behavioral interviews, and reference verification ensures top-tier talent."
+    },
+    {
+      "title": "Full Compliance",
+      "description": "Comprehensive compliance management covering I-9, E-Verify, background checks, and all federal and state regulations."
+    },
+    {
+      "title": "Dedicated Team",
+      "description": "Every client gets a dedicated account team working in sync — recruiter, account manager, and compliance specialist."
+    },
+    {
+      "title": "Proven Track Record",
+      "description": "High client retention and hundreds of successful placements across Fortune 500 companies and growing enterprises."
+    },
+    {
+      "title": "Nationwide Coverage",
+      "description": "Staffing solutions across all 50 US states with expertise in both on-site and remote workforce deployment."
+    }
+  ],
+  "engagementModels": [
+    {
+      "title": "W2 Employment",
+      "description": "Consultants on our payroll with full tax compliance, benefits eligibility, and workers compensation coverage.",
+      "tag": "Most Popular",
+      "featured": true
+    },
+    {
+      "title": "Corp-to-Corp (C2C)",
+      "description": "For independent contractors working through their own corporation. Flexible arrangements with streamlined onboarding.",
+      "tag": "Flexible",
+      "featured": false
+    },
+    {
+      "title": "Contract",
+      "description": "Time-bound engagements for project-specific needs. Scale up or down based on business demands.",
+      "tag": "Scalable",
+      "featured": false
+    },
+    {
+      "title": "Contract-to-Hire",
+      "description": "Evaluate consultants on the job before making a permanent offer. Minimize hiring risk with a try-before-you-buy approach.",
+      "tag": "Low Risk",
+      "featured": false
+    },
+    {
+      "title": "Full-Time / Direct Hire",
+      "description": "End-to-end permanent placement services. We find, screen, and present the best candidates for your team.",
+      "tag": "Permanent",
+      "featured": false
+    }
+  ],
+  "hiringProcess": [
+    {
+      "title": "Requirement Understanding",
+      "description": "We start by deeply understanding your hiring needs — the role, technical requirements, team dynamics, company culture, and project timelines. Our dedicated account manager works closely with your hiring team to capture every detail.",
+      "highlights": [
+        "Detailed job requirement analysis",
+        "Technical skill mapping",
+        "Culture fit assessment criteria",
+        "Timeline and priority alignment"
+      ]
+    },
+    {
+      "title": "Sourcing & Screening",
+      "description": "Our recruiters leverage our proprietary database, job boards, professional networks, and referral channels to build a targeted candidate pipeline. Every candidate undergoes initial screening for experience, skills, and availability.",
+      "highlights": [
+        "Multi-channel sourcing strategy",
+        "Extensive pre-screened professional network",
+        "Active and passive candidate outreach",
+        "Availability and interest verification"
+      ]
+    },
+    {
+      "title": "Technical Validation",
+      "description": "Qualified candidates go through rigorous technical evaluation. For IT roles, this includes coding assessments, system design discussions, and domain-specific knowledge tests conducted by our in-house technical team.",
+      "highlights": [
+        "Hands-on technical assessments",
+        "Domain expertise evaluation",
+        "Communication and soft skills review",
+        "Background and reference pre-checks"
+      ]
+    },
+    {
+      "title": "Client Submission",
+      "description": "We present a shortlist of 3-5 highly qualified candidates with detailed profiles, assessment summaries, and our recommendations. Each submission includes the candidate's strengths, experience highlights, and availability.",
+      "highlights": [
+        "Curated shortlist of top candidates",
+        "Detailed candidate profiles and summaries",
+        "Skill-match scoring against requirements",
+        "Rapid submission turnaround"
+      ]
+    },
+    {
+      "title": "Interview Coordination",
+      "description": "We manage the entire interview process — scheduling, preparation, feedback collection, and follow-up. Our team ensures smooth communication between all parties and provides candidates with interview preparation support.",
+      "highlights": [
+        "End-to-end interview scheduling",
+        "Candidate interview preparation",
+        "Real-time feedback coordination",
+        "Offer negotiation support"
+      ]
+    },
+    {
+      "title": "Onboarding & Support",
+      "description": "Once selected, we handle all onboarding logistics including paperwork, compliance documentation, and orientation support. Our relationship continues post-placement with regular check-ins to ensure success.",
+      "highlights": [
+        "Seamless onboarding process",
+        "Compliance and documentation management",
+        "Post-placement check-ins",
+        "Ongoing performance support"
+      ]
+    }
+  ],
+  "coreValues": [
+    {
+      "title": "Integrity",
+      "description": "We believe in transparent communication and ethical business practices. Every interaction is built on trust and honesty."
+    },
+    {
+      "title": "Speed",
+      "description": "In staffing, timing is everything. Our streamlined processes ensure rapid candidate submissions without compromising quality."
+    },
+    {
+      "title": "Quality",
+      "description": "We never cut corners on candidate screening. Our multi-layered assessment ensures every professional we present exceeds expectations."
+    },
+    {
+      "title": "Transparency",
+      "description": "Clients and candidates always know where they stand. We provide full visibility into our processes, timelines, and candidate pipelines."
+    }
+  ],
+  "processStats": [
+    { "value": "24-48h", "label": "Time to Submit" },
+    { "value": "3-5", "label": "Candidates per Role" },
+    { "value": "95%", "label": "Interview-to-Offer" }
   ]
 }

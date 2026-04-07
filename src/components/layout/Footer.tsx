@@ -34,7 +34,7 @@ export default function Footer() {
             </p>
             <div className="space-y-3">
               <div className="flex items-center space-x-3 text-sm group">
-                <div className="w-8 h-8 bg-brand-green/20 rounded-lg flex items-center justify-center group-hover:bg-brand-green/30 transition-colors">
+                <div className="w-10 h-10 bg-brand-green/20 rounded-lg flex items-center justify-center group-hover:bg-brand-green/30 transition-colors">
                   <HiEnvelope className="w-4 h-4 text-brand-green" />
                 </div>
                 <a
@@ -45,7 +45,7 @@ export default function Footer() {
                 </a>
               </div>
               <div className="flex items-center space-x-3 text-sm group">
-                <div className="w-8 h-8 bg-brand-green/20 rounded-lg flex items-center justify-center group-hover:bg-brand-green/30 transition-colors">
+                <div className="w-10 h-10 bg-brand-green/20 rounded-lg flex items-center justify-center group-hover:bg-brand-green/30 transition-colors">
                   <HiPhone className="w-4 h-4 text-brand-green" />
                 </div>
                 <a
@@ -101,7 +101,7 @@ export default function Footer() {
             {OFFICES.map((office) => (
               <div key={office.city} className="mb-6">
                 <div className="flex items-start space-x-3">
-                  <div className="w-8 h-8 bg-brand-green/20 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <div className="w-10 h-10 bg-brand-green/20 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
                     <HiMapPin className="w-4 h-4 text-brand-green" />
                   </div>
                   <div>

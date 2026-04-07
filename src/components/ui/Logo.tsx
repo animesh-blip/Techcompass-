@@ -36,7 +36,7 @@ export default function Logo({
         className={clsx(
           "h-auto w-auto",
           variant === "horizontal" && "max-h-10 md:max-h-12",
-          variant === "stacked" && "max-h-24",
+          variant === "stacked" && "max-h-20 md:max-h-24",
           variant === "icon" && "max-h-10"
         )}
         priority={variant === "horizontal"}

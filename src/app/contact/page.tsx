@@ -81,7 +81,7 @@ export default function ContactPage() {
                           required
                           value={formData.name}
                           onChange={handleChange}
-                          className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-brand-green focus:border-transparent focus:shadow-[0_0_20px_rgba(124,179,66,0.15)] outline-none transition-all"
+                          className="text-base w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-brand-green focus:border-transparent focus:shadow-[0_0_20px_rgba(124,179,66,0.15)] outline-none transition-all"
                           placeholder="John Smith"
                         />
                       </div>
@@ -99,7 +99,7 @@ export default function ContactPage() {
                           required
                           value={formData.email}
                           onChange={handleChange}
-                          className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-brand-green focus:border-transparent focus:shadow-[0_0_20px_rgba(124,179,66,0.15)] outline-none transition-all"
+                          className="text-base w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-brand-green focus:border-transparent focus:shadow-[0_0_20px_rgba(124,179,66,0.15)] outline-none transition-all"
                           placeholder="john@company.com"
                         />
                       </div>
@@ -118,7 +118,7 @@ export default function ContactPage() {
                           name="company"
                           value={formData.company}
                           onChange={handleChange}
-                          className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-brand-green focus:border-transparent focus:shadow-[0_0_20px_rgba(124,179,66,0.15)] outline-none transition-all"
+                          className="text-base w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-brand-green focus:border-transparent focus:shadow-[0_0_20px_rgba(124,179,66,0.15)] outline-none transition-all"
                           placeholder="Your Company"
                         />
                       </div>
@@ -135,7 +135,7 @@ export default function ContactPage() {
                           name="phone"
                           value={formData.phone}
                           onChange={handleChange}
-                          className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-brand-green focus:border-transparent focus:shadow-[0_0_20px_rgba(124,179,66,0.15)] outline-none transition-all"
+                          className="text-base w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-brand-green focus:border-transparent focus:shadow-[0_0_20px_rgba(124,179,66,0.15)] outline-none transition-all"
                           placeholder="+1 (555) 000-0000"
                         />
                       </div>
@@ -154,7 +154,7 @@ export default function ContactPage() {
                         rows={5}
                         value={formData.message}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-brand-green focus:border-transparent focus:shadow-[0_0_20px_rgba(124,179,66,0.15)] outline-none transition-all resize-none"
+                        className="text-base w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-brand-green focus:border-transparent focus:shadow-[0_0_20px_rgba(124,179,66,0.15)] outline-none transition-all resize-none"
                         placeholder="Tell us about your staffing needs..."
                       />
                     </div>

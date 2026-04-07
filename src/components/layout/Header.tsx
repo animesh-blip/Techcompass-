@@ -63,7 +63,7 @@ export default function Header() {
           </nav>
 
           <button
-            className="lg:hidden p-2 text-navy-500 hover:text-brand-green transition-colors"
+            className="lg:hidden p-3 text-navy-500 hover:text-brand-green transition-colors"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -80,7 +80,7 @@ export default function Header() {
       <div
         className={clsx(
           "lg:hidden overflow-hidden transition-all duration-300",
-          isMenuOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
+          isMenuOpen ? "max-h-[600px] opacity-100" : "max-h-0 opacity-0"
         )}
       >
         <nav className="max-w-7xl mx-auto px-4 py-4 space-y-1 bg-white/95 backdrop-blur-md border-t">
