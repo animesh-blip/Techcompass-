@@ -449,17 +449,21 @@ function FAQEditor({ data, onChange }: { data: SiteContent["faqs"]; onChange: (d
 // ── Main Admin Panel ──────────────────────────────────────
 function AdminPanel({ token }: { token: string }) {
   const [content, setContent] = useState<SiteContent | null>(null);
+  const [savedContent, setSavedContent] = useState<string>("");
   const [activeSection, setActiveSection] = useState<SectionKey>("hero");
   const [saving, setSaving] = useState(false);
   const [saveStatus, setSaveStatus] = useState<"idle" | "success" | "error">("idle");
   const [loading, setLoading] = useState(true);
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
+  const hasUnsavedChanges = content ? JSON.stringify(content) !== savedContent : false;
+
   const loadContent = useCallback(async () => {
     try {
       const res = await fetch("/api/content");
       const data = await res.json();
       setContent(data);
+      setSavedContent(JSON.stringify(data));
     } catch {
       console.error("Failed to load content");
     }
@@ -469,6 +473,17 @@ function AdminPanel({ token }: { token: string }) {
   useEffect(() => {
     loadContent();
   }, [loadContent]);
+
+  // Warn before leaving with unsaved changes
+  useEffect(() => {
+    const handleBeforeUnload = (e: BeforeUnloadEvent) => {
+      if (hasUnsavedChanges) {
+        e.preventDefault();
+      }
+    };
+    window.addEventListener("beforeunload", handleBeforeUnload);
+    return () => window.removeEventListener("beforeunload", handleBeforeUnload);
+  }, [hasUnsavedChanges]);
 
   const handleSave = async () => {
     if (!content) return;
@@ -484,6 +499,7 @@ function AdminPanel({ token }: { token: string }) {
         body: JSON.stringify(content),
       });
       if (res.ok) {
+        setSavedContent(JSON.stringify(content));
         setSaveStatus("success");
         setTimeout(() => setSaveStatus("idle"), 3000);
       } else {
@@ -496,6 +512,9 @@ function AdminPanel({ token }: { token: string }) {
   };
 
   const handleLogout = () => {
+    if (hasUnsavedChanges && !window.confirm("You have unsaved changes. Are you sure you want to logout?")) {
+      return;
+    }
     sessionStorage.removeItem("admin_token");
     window.location.reload();
   };
@@ -551,6 +570,11 @@ function AdminPanel({ token }: { token: string }) {
               <HiPencilSquare className="w-4 h-4 text-white" />
             </div>
             <span className="font-bold text-gray-900 hidden sm:inline">TechCompass Admin</span>
+            {hasUnsavedChanges && (
+              <span className="ml-2 text-xs bg-amber-100 text-amber-700 px-2 py-0.5 rounded-full font-medium hidden sm:inline">
+                Unsaved changes
+              </span>
+            )}
           </div>
         </div>
         <div className="flex items-center gap-3">

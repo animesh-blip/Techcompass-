@@ -41,7 +41,7 @@ const reasons = [
     icon: HiChartBar,
     title: "Proven Track Record",
     description:
-      "98% client retention rate with 500+ successful placements across Fortune 500 companies and growing enterprises.",
+      "High client retention and hundreds of successful placements across Fortune 500 companies and growing enterprises.",
   },
   {
     icon: HiGlobeAmericas,
