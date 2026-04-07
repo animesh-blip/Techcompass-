@@ -194,15 +194,15 @@ export default function HowWeWorkPage() {
                 50,000+ pre-screened professionals, we fill positions faster than
                 industry averages — without cutting corners on quality.
               </p>
-              <div className="grid grid-cols-3 gap-8 mb-12">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-12">
                 <div className="glass-card p-6">
-                  <p className="text-4xl md:text-5xl font-bold gradient-text font-heading">
+                  <p className="text-3xl md:text-4xl lg:text-5xl font-bold gradient-text font-heading">
                     24-48h
                   </p>
                   <p className="text-gray-400 text-sm mt-2">Time to Submit</p>
                 </div>
                 <div className="glass-card p-6">
-                  <p className="text-4xl md:text-5xl font-bold gradient-text font-heading">
+                  <p className="text-3xl md:text-4xl lg:text-5xl font-bold gradient-text font-heading">
                     3-5
                   </p>
                   <p className="text-gray-400 text-sm mt-2">
@@ -210,7 +210,7 @@ export default function HowWeWorkPage() {
                   </p>
                 </div>
                 <div className="glass-card p-6">
-                  <p className="text-4xl md:text-5xl font-bold gradient-text font-heading">
+                  <p className="text-3xl md:text-4xl lg:text-5xl font-bold gradient-text font-heading">
                     <AnimatedCounter target={95} suffix="%" />
                   </p>
                   <p className="text-gray-400 text-sm mt-2">

@@ -1,24 +1,25 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
+import LayoutWrapper from "@/components/layout/LayoutWrapper";
 
 export const metadata: Metadata = {
   title: {
-    default: "TechCompass Services - US IT Staffing & Workforce Solutions",
+    default: "TechCompass Services - US Staffing & Workforce Solutions",
     template: "%s | TechCompass Services",
   },
   description:
-    "TechCompass Services is a leading US IT staffing company providing top talent in IT, Engineering, and Professional staffing. W2, C2C, Contract, Contract-to-Hire, and Direct Hire solutions.",
+    "TechCompass Services is a leading US staffing company specializing in IT, Engineering, and Professional talent. W2, C2C, Contract, Contract-to-Hire, and Direct Hire workforce solutions.",
   keywords: [
-    "US IT staffing",
-    "IT staffing company",
+    "US staffing company",
+    "IT staffing",
+    "engineering staffing",
+    "professional staffing",
     "contract staffing",
     "W2 staffing",
     "C2C staffing",
     "workforce solutions",
     "tech recruitment",
-    "engineering staffing",
+    "staffing agency",
   ],
 };
 
@@ -31,9 +32,7 @@ export default function RootLayout({
     <html lang="en">
       <head />
       <body className="font-body antialiased">
-        <Header />
-        <main className="pt-16">{children}</main>
-        <Footer />
+        <LayoutWrapper>{children}</LayoutWrapper>
       </body>
     </html>
   );

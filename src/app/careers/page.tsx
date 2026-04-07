@@ -16,7 +16,7 @@ import {
 export const metadata: Metadata = {
   title: "Careers",
   description:
-    "Join leading US companies through TechCompass Services. We connect skilled IT professionals with exciting career opportunities across the nation.",
+    "Join leading US companies through TechCompass Services. We connect skilled professionals in IT, Engineering, and Business roles with exciting career opportunities across the nation.",
 };
 
 const benefits = [

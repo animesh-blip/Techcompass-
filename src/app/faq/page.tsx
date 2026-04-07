@@ -52,7 +52,7 @@ function FAQItem({
         <div
           className={clsx(
             "overflow-hidden transition-all duration-500",
-            isOpen ? "max-h-96" : "max-h-0"
+            isOpen ? "max-h-[600px]" : "max-h-0"
           )}
         >
           <div className="px-6 md:px-8 pb-6 md:pb-8 text-gray-600 leading-relaxed text-lg border-t border-gray-100 pt-6">

@@ -18,7 +18,7 @@ import {
 export const metadata: Metadata = {
   title: "Services",
   description:
-    "Explore TechCompass staffing services — IT Staffing, Engineering Staffing, Professional Staffing, Contract, Contract-to-Hire, and Direct Hire solutions.",
+    "TechCompass offers comprehensive staffing services including IT, Engineering, and Professional Staffing with flexible models — Contract, Contract-to-Hire, and Direct Hire solutions.",
 };
 
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {

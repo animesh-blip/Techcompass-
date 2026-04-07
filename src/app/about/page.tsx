@@ -20,7 +20,7 @@ import {
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "Learn about TechCompass Services — a leading US IT staffing firm dedicated to connecting businesses with top talent through integrity, speed, and quality.",
+    "Learn about TechCompass Services — a leading US staffing firm connecting businesses with top IT, Engineering, and Professional talent through integrity, speed, and quality.",
 };
 
 const coreValues = [
@@ -97,7 +97,7 @@ export default function AboutPage() {
             <div className="max-w-4xl mx-auto">
               <SectionHeading
                 title="Who We Are"
-                subtitle="TechCompass Services is a specialized US IT staffing and workforce solutions company that connects businesses with exceptional talent across technology, engineering, and professional domains."
+                subtitle="TechCompass Services is a specialized US staffing and workforce solutions company that connects businesses with exceptional talent across technology, engineering, and professional domains."
               />
               <div className="prose max-w-none text-gray-600 space-y-5 text-lg leading-relaxed">
                 <p>

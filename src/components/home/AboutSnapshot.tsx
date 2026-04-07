@@ -46,7 +46,7 @@ export default function AboutSnapshot() {
         <ScrollReveal>
           <SectionHeading
             title="Your Trusted Staffing Partner"
-            subtitle="TechCompass Services is a specialized US IT staffing firm dedicated to connecting businesses with exceptional talent. With deep industry expertise and a commitment to quality, we help organizations build high-performing teams."
+            subtitle="TechCompass Services is a specialized US staffing firm dedicated to connecting businesses with exceptional IT, Engineering, and Professional talent. With deep industry expertise and a commitment to quality, we help organizations build high-performing teams."
           />
         </ScrollReveal>
 

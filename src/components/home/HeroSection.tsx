@@ -25,12 +25,12 @@ export default function HeroSection() {
           <div className="inline-flex items-center px-5 py-2.5 glass-card mb-8 opacity-0 animate-fade-in-down">
             <div className="w-2 h-2 bg-brand-green rounded-full mr-3 animate-pulse" />
             <span className="text-brand-green-light text-sm font-semibold tracking-wide">
-              US IT Staffing & Workforce Solutions
+              US Staffing & Workforce Solutions
             </span>
           </div>
 
           {/* Heading */}
-          <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-white font-heading leading-tight mb-8 opacity-0 animate-fade-in-up animation-delay-200">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold text-white font-heading leading-tight mb-8 opacity-0 animate-fade-in-up animation-delay-200">
             Connecting Top Talent
             <br />
             with{" "}
@@ -40,7 +40,7 @@ export default function HeroSection() {
           </h1>
 
           {/* Subheading */}
-          <p className="text-xl md:text-2xl text-gray-300 max-w-2xl mb-12 leading-relaxed opacity-0 animate-fade-in-up animation-delay-400">
+          <p className="text-lg md:text-xl lg:text-2xl text-gray-300 max-w-2xl mb-12 leading-relaxed opacity-0 animate-fade-in-up animation-delay-400">
             Your trusted staffing partner for IT, Engineering, and Professional
             talent. Pre-vetted, high-quality candidates delivered with speed and
             precision across all 50 states.

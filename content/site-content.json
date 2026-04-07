@@ -1,0 +1,79 @@
+{
+  "hero": {
+    "badge": "US Staffing & Workforce Solutions",
+    "title": "Connecting Top Talent with",
+    "titleHighlight": "Leading US Companies",
+    "subtitle": "Your trusted staffing partner for IT, Engineering, and Professional talent. Pre-vetted, high-quality candidates delivered with speed and precision across all 50 states.",
+    "stats": [
+      { "value": "500+", "label": "Placements" },
+      { "value": "150+", "label": "Active Clients" },
+      { "value": "24-48h", "label": "Avg. Turnaround" },
+      { "value": "98%", "label": "Client Retention" }
+    ]
+  },
+  "about": {
+    "shortDescription": "TechCompass Services is a specialized US staffing firm dedicated to connecting businesses with exceptional IT, Engineering, and Professional talent. With deep industry expertise and a commitment to quality, we help organizations build high-performing teams.",
+    "fullDescription": [
+      "Founded with a mission to bridge the gap between top talent and leading organizations, TechCompass has grown into a trusted staffing partner for businesses ranging from innovative startups to Fortune 500 enterprises across the United States.",
+      "Our team of experienced recruiters combines deep industry knowledge with cutting-edge sourcing techniques to identify, assess, and deliver professionals who not only meet technical requirements but also align with your organizational culture and long-term goals.",
+      "With offices in Bengaluru and Jaipur, our recruiting operations provide an around-the-clock sourcing advantage, enabling us to deliver candidates faster than traditional staffing models. Whether you need a single specialist or an entire project team, TechCompass is your compass to the right talent."
+    ],
+    "mission": "To empower US businesses with the right talent at the right time by delivering fast, compliant, and quality-driven staffing solutions. We are committed to being the staffing partner that organizations trust for their most critical hiring needs.",
+    "vision": "To be recognized as a premier US staffing firm known for exceptional candidate quality, rapid fulfillment, and long-term client partnerships. We envision a workforce ecosystem where every placement creates lasting value for both businesses and professionals."
+  },
+  "contact": {
+    "email": "info@techcompassservices.com",
+    "phone": "+1 (555) 123-4567",
+    "offices": [
+      {
+        "city": "Bengaluru",
+        "address": ["Novel Office Marathahalli", "Novel MSR Building, Subbaiah Reddy Colony", "Marathahalli Village", "Bengaluru, Karnataka 560037"]
+      },
+      {
+        "city": "Jaipur",
+        "address": ["41-K-5, Janpath", "Jyothi Nagar, Lalkothi", "Jaipur, Rajasthan 302015"]
+      }
+    ]
+  },
+  "services": [
+    {
+      "id": "it-staffing",
+      "title": "IT Staffing",
+      "description": "We connect businesses with top-tier IT professionals who drive digital transformation. From cloud architects to full-stack developers, our extensive talent network ensures you get the right technical expertise for your projects.",
+      "benefits": ["Access to pre-vetted IT professionals", "Rapid fulfillment within 24-48 hours", "Technical skill validation by industry experts", "Scalable teams for project-based needs"],
+      "roles": ["Software Engineers", "Cloud Architects", "DevOps Engineers", "Data Engineers", "SAP Consultants", "Cybersecurity Analysts", "Full-Stack Developers", "QA Engineers"]
+    },
+    {
+      "id": "engineering-staffing",
+      "title": "Engineering Staffing",
+      "description": "Our engineering staffing solutions provide skilled professionals for complex technical projects. We understand the nuances of engineering disciplines and match candidates who bring both expertise and innovation to your team.",
+      "benefits": ["Specialized engineering talent pipeline", "Domain-specific screening processes", "Compliance with industry certifications", "Flexible engagement models"],
+      "roles": ["Mechanical Engineers", "Electrical Engineers", "Systems Engineers", "Project Engineers", "Civil Engineers", "Industrial Engineers", "Manufacturing Engineers"]
+    },
+    {
+      "id": "professional-staffing",
+      "title": "Professional Staffing",
+      "description": "Beyond technology and engineering, we provide qualified professionals across business functions. Our professional staffing division covers administrative, financial, and operational roles that keep organizations running smoothly.",
+      "benefits": ["Comprehensive candidate assessment", "Cultural fit evaluation", "Background verification included", "Quick ramp-up capability"],
+      "roles": ["Business Analysts", "Project Managers", "Scrum Masters", "Data Analysts", "Financial Analysts", "HR Specialists", "Technical Writers"]
+    }
+  ],
+  "industries": [
+    { "id": "it-technology", "title": "IT & Technology", "description": "Powering innovation in the tech sector with software developers, cloud engineers, data scientists, and cybersecurity experts. We support startups to Fortune 500 companies in building world-class technology teams.", "areas": ["Software Development", "Cloud Computing", "Data Science & AI", "Cybersecurity", "ERP & CRM"] },
+    { "id": "engineering", "title": "Engineering", "description": "Delivering specialized engineering talent for manufacturing, construction, aerospace, and energy sectors. Our engineers bring technical excellence and project delivery experience.", "areas": ["Mechanical Design", "Electrical Systems", "Civil Infrastructure", "Aerospace", "Energy & Utilities"] },
+    { "id": "finance-accounting", "title": "Finance & Accounting", "description": "Providing skilled finance and accounting professionals who bring analytical rigor and regulatory knowledge to banking, insurance, and financial services organizations.", "areas": ["Financial Analysis", "Risk Management", "Regulatory Compliance", "Accounting Operations", "FinTech Solutions"] },
+    { "id": "administrative-professional", "title": "Administrative & Professional", "description": "Connecting organizations with skilled administrative and business professionals who enhance operational efficiency and support organizational growth.", "areas": ["Executive Assistance", "Office Management", "Human Resources", "Operations Support", "Customer Service"] }
+  ],
+  "faqs": [
+    { "question": "What types of staffing services does TechCompass offer?", "answer": "We offer comprehensive staffing solutions including Contract Staffing (W2 and C2C), Contract-to-Hire, and Direct Hire placements. Our specializations span IT, Engineering, and Professional staffing across multiple industries." },
+    { "question": "What is the difference between W2 and C2C engagements?", "answer": "W2 (wage) employees are on our payroll where we handle taxes, benefits, and compliance. C2C (Corp-to-Corp) engagements involve contractors who work through their own corporation or an employer of record. We support both models based on client and candidate preferences." },
+    { "question": "How quickly can TechCompass fill a position?", "answer": "Our average time-to-submit for qualified candidates is 24-48 hours. For most positions, we can present 3-5 screened and qualified candidates within the first week. Our extensive talent database and proactive sourcing approach enable rapid fulfillment." },
+    { "question": "Do you work with VMS and MSP programs?", "answer": "Yes, we are experienced in working within VMS (Vendor Management Systems) and MSP (Managed Service Provider) programs. We integrate seamlessly with platforms like Fieldglass, Beeline, and others, ensuring full compliance with program requirements." },
+    { "question": "What industries do you serve?", "answer": "We serve a wide range of industries including IT & Technology, Engineering, Finance & Accounting, and Administrative & Professional sectors. Our recruiters have domain expertise in each industry vertical." },
+    { "question": "How do you ensure candidate quality?", "answer": "Our rigorous screening process includes technical assessments, behavioral interviews, reference checks, and background verification. For IT roles, we conduct hands-on technical evaluations. Only candidates who meet all criteria are submitted to our clients." },
+    { "question": "Can you help scale our team quickly for a large project?", "answer": "Absolutely. We have successfully executed volume hiring projects, ramping up 15-50+ consultants within tight timelines. Our bench strength, talent database, and dedicated sourcing team enable rapid scaling while maintaining quality standards." },
+    { "question": "What geographic areas do you cover?", "answer": "We provide staffing services across all 50 US states, supporting both on-site and remote positions. Our recruiting operations in India enable us to offer a 24-hour sourcing cycle, giving our clients a significant time-to-fill advantage." },
+    { "question": "How does your contract-to-hire model work?", "answer": "In our contract-to-hire model, a consultant works on a contract basis for a defined evaluation period (typically 3-6 months). If the consultant is a good fit, the client can convert them to a full-time employee. This approach minimizes hiring risk and ensures cultural fit." },
+    { "question": "What compliance measures do you follow?", "answer": "We maintain strict compliance with all federal and state employment laws, including I-9 verification, E-Verify, workers compensation, and tax regulations. We carry comprehensive insurance coverage and ensure all consultants meet legal work authorization requirements." }
+  ]
+}
